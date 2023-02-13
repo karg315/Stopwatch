@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Rock+Salt&family=Handlee&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="titulo">
+        <h1><span>Stopwatch</span></h1>
+    </div>
+
+    <div class="container">
+        <div class="stopwatch">
+            <h3><span class="tiempo" id="txtTiempo">00:00:00.0</span></h3>
+            <button type="button" id="btnIniciar" class="btnIniciar">Iniciar</button>
+            <button type="button" id="btnDetener" class="btnDetener">Detener</button>
+            <button type="button" id="btnReiniciar" class="btnReiniciar">Reiniciar</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="estado">
+            <div class="imagen">
+                <img src="./img/sin iniciar.svg" alt="Cronómetro sin iniciar" id="imgCronometro">
+            </div>
+            <div class="txtEstado" id="txtEstado">Crónometro sin iniciar</div>
+            <h3></h3>
+        </div>
+    </div>
+
+    <footer>
+        <h5>Kevin Rodriguez</h5>
+        <h6>Imagenes de los cronómetros de: icon king1 en <a href="https://freeicons.io/"
+                target="_blank" rel="noopener">freeicons.io</a></h6>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

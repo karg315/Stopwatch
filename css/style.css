@@ -1,0 +1,146 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: linear-gradient(
+        to right bottom,
+        rgb(90, 172, 255),
+        rgba(0, 35, 236, 0.6)
+    );
+}
+
+.container,
+.titulo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.titulo,
+.stopwatch,
+.estado {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 5px 10px 15px 15px rgba(0, 0, 0, 0.1);
+    border: solid 2px;
+    border-color: rgba(0, 247, 255, 0.521);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.titulo {
+    margin-top: 5vh;
+    width: 50%;
+    text-align: center;
+    color: rgb(3, 0, 155);
+    padding: 25px;
+    font-size: 125%;
+    max-width: 400px;
+}
+
+.stopwatch {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    min-width: 100%;
+    max-width: 50rem;
+    padding: 0px;
+    font-family: "MuseoModerno", cursive;
+}
+
+h1 span {
+    font-family: "Rock Salt", cursive;
+}
+
+h3 span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h1,
+h5 {
+    margin: 0px;
+}
+
+h5 {
+    font-size: 115%;
+}
+
+h6 {
+    margin: 3px;
+    font-size: 70%;
+}
+
+.tiempo {
+    font-size: 45px;
+}
+
+button {
+    font-size: 135%;
+    font-family: "MuseoModerno", cursive;
+    margin: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btnIniciar {
+    background-color: rgb(147, 241, 147);
+}
+
+.btnIniciar:hover {
+    background-color: rgb(102, 239, 102);
+}
+
+.btnDetener {
+    background-color: rgb(241, 147, 147);
+}
+
+.btnDetener:hover {
+    background-color: rgb(239, 97, 97);
+}
+
+.btnReiniciar {
+    background-color: rgb(105, 200, 235);
+}
+
+.btnReiniciar:hover {
+    background-color: rgb(59, 196, 237);
+}
+
+.estado {
+    margin-top: 20px;
+    display: flex;
+	align-items: center;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.imagen {
+    text-align: justify;
+    width: 50px;
+    height: 50px;
+}
+
+.txtEstado { 
+    text-align: center;
+    font-size: 20px;
+    padding-left: 10px;
+    font-family: "MuseoModerno", cursive;
+}
+
+footer {
+    align-self: flex-end;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    font-family: "Handlee", cursive;
+    font-size: 24px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
