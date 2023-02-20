@@ -19,12 +19,14 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    width: 75vw;
+    max-width: 660px;
 }
 
 .titulo,
 .stopwatch,
-.estado {
+.estado,
+.intervalos {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     box-shadow: 5px 10px 15px 15px rgba(0, 0, 0, 0.1);
@@ -35,13 +37,11 @@ body {
 }
 
 .titulo {
-    margin-top: 5vh;
-    width: 50%;
+    margin-top: 3vh;
     text-align: center;
-    color: rgb(3, 0, 155);
-    padding: 25px;
-    font-size: 125%;
-    max-width: 400px;
+    color: rgb(6, 0, 122);
+    padding: 0.3em;
+    font-size: 1.5em;
 }
 
 .stopwatch {
@@ -64,6 +64,7 @@ h3 span {
 }
 
 h1,
+h2,
 h5 {
     margin: 0px;
 }
@@ -87,6 +88,7 @@ button {
     margin: 7px;
     border: 1px solid black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btnIniciar {
@@ -113,6 +115,16 @@ button {
     background-color: rgb(59, 196, 237);
 }
 
+.btnIntervalo,
+.btnLimpiar {
+    background-color: rgb(255, 255, 255);
+}
+
+.btnIntervalo:hover,
+.btnLimpiar:hover {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
 .estado {
     margin-top: 20px;
     display: flex;
@@ -123,8 +135,13 @@ button {
 
 .imagen {
     text-align: justify;
-    width: 50px;
-    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    padding-left: 10px;
+}
+
+img {
+    padding-top: 4px;
 }
 
 .txtEstado { 
@@ -134,13 +151,47 @@ button {
     font-family: "MuseoModerno", cursive;
 }
 
+.intervalos {
+    padding: 1em;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "MuseoModerno", cursive;
+    margin-bottom: 20px;
+    max-height: 32vh;
+    overflow-y: scroll;
+}
+
+.table {
+    width: 100%;
+    padding: 0px;
+}
+
+tr {
+    padding-top: -1px;
+}
+
 footer {
     align-self: flex-end;
     margin-top: auto;
     width: 100%;
     text-align: center;
     font-family: "Handlee", cursive;
-    font-size: 24px;
+    font-size: 20px;
     background-color: rgb(35, 35, 35);
     color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #2700ec, #005bc9);
+    border-radius: 25px;
+    border: 2px solid blue;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
 }
