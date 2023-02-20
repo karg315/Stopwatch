@@ -55,7 +55,7 @@ function iniciar() {
         } else {
             txtEstado.innerHTML = "El cronómetro se ha iniciado.";
         }
-        icono.href = "./img/corriendo.PNG";
+        icono.href = "./img/corriendo.png";
         imgCronometro.src = "./img/iniciado.svg";
     } else {
         txtEstado.innerHTML = "El cronómetro ya se encuentra corriendo.";
