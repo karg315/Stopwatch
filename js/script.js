@@ -68,14 +68,14 @@ function detener() {
         btnIniciar.innerHTML = "Reanudar";
         txtEstado.innerHTML = "El cronómetro se ha detenido.";
         imgCronometro.src = "./img/detenido.svg";
-        icono.href = "./img/detenido.PNG";
+        icono.href = "./img/detenido.png";
         contar = false;
         clearInterval(intervalo);
         estado = "no contando";
     } else {
         txtEstado.innerHTML = "El cronómetro no se ha iniciado.";
         imgCronometro.src = "./img/sin iniciar.svg";
-        icono.href = "./img/sin iniciar.PNG";
+        icono.href = "./img/sin iniciar.png";
     }
 }
 
@@ -83,7 +83,7 @@ function reiniciar() {
     if (tiempo.innerHTML != "00:00:00.0") {
         txtEstado.innerHTML = "El cronómetro se ha reiniciado.";
         imgCronometro.src = "./img/reinicio.svg";
-        icono.href = "./img/reinicio.PNG";
+        icono.href = "./img/reinicio.png";
         contar = false;
         reiniciarCuenta();
         clearInterval(intervalo);
@@ -91,7 +91,7 @@ function reiniciar() {
     } else {
         txtEstado.innerHTML = "El cronómetro no se ha iniciado.";
         imgCronometro.src = "./img/sin iniciar.svg";
-        icono.href = "./img/sin iniciar.PNG";
+        icono.href = "./img/sin iniciar.png";
     }
 }
 
