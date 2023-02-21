@@ -90,9 +90,10 @@ button {
     font-size: 135%;
     font-family: "MuseoModerno", cursive;
     margin: 7px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .btnIniciar {
@@ -146,6 +147,7 @@ button {
 
 img {
     padding-top: 4px;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.9));
 }
 
 .txtEstado { 
@@ -153,21 +155,31 @@ img {
     font-size: 20px;
     padding-left: 10px;
     font-family: "MuseoModerno", cursive;
+    font-weight: 600;
+}
+
+th {
+    font-size: 120%;
 }
 
 .intervalos {
-    padding: 1em;
+    padding: 0.65em;
     margin-top: 20px;
     text-align: center;
     font-family: "MuseoModerno", cursive;
     margin-bottom: 20px;
     max-height: 32vh;
     overflow-y: scroll;
+    font-weight: 600;
 }
 
 .table {
     width: 100%;
     padding: 0px;
+}
+
+td {
+    font-size: 110%;
 }
 
 footer {
