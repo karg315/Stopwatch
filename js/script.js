@@ -8,6 +8,7 @@ const icono = document.getElementById("icono");
 const btnIntervalo = document.getElementById("btnIntervalo");
 const btnLimpiarInter = document.getElementById("btnLimpiar");
 const tabla = document.getElementById("tablaIntervalos");
+const encabezados = tabla.firstElementChild;
 
 var contar = false;
 var estado = "no contando";
@@ -25,6 +26,8 @@ var segTxt = "0" + seg;
 
 var numeroIntervalos = 0;
 var ultimoIntervalo = 0;
+
+console.log(typeof tabla);
 
 btnIniciar.addEventListener("click", () => {
     iniciar();
@@ -44,7 +47,7 @@ btnIntervalo.addEventListener("click", () => {
 
 btnLimpiarInter.addEventListener("click", () => {
     limpiarIntervalos();
-})
+});
 
 function iniciar() {
     contar = true;
@@ -52,7 +55,8 @@ function iniciar() {
         iniciarCuenta();
         if (tiempo.innerHTML != "00:00:00.0") {
             txtEstado.innerHTML = "El cronómetro se ha reanudado.";
-        } else {
+        } else {           
+            limpiarIntervalos();
             txtEstado.innerHTML = "El cronómetro se ha iniciado.";
         }
         icono.href = "./img/corriendo.png";
@@ -150,8 +154,7 @@ function hacerIntervalo() {
     if (tiempo.innerHTML == "00:00:00.0"){
         txtEstado.innerHTML = "Intervalo no creado. Cronómetro sin iniciar.";
         imgCronometro.src = "./img/intervalo no creado.svg";
-    } else {
-        numeroIntervalos++;
+    } else {        
         let horaActual = (hr * 36000) + (min * 600) + (seg * 10) + dc;
         let cambio = horaActual - ultimoIntervalo;
 
@@ -159,6 +162,8 @@ function hacerIntervalo() {
             txtEstado.innerHTML = "Intervalo no creado. El intervalo es igual al anterior.";
             imgCronometro.src = "./img/intervalo igual.svg";
         } else {
+            numeroIntervalos++;
+
             let cambioHr = Math.trunc(cambio/36000);
             if (cambioHr < 10) {
                 cambioHr = "0" + cambioHr;
@@ -174,7 +179,7 @@ function hacerIntervalo() {
                 cambioSeg = "0" + cambioSeg;
                 }
 
-            let cambioDc = Math.trunc(cambio - (cambioHr*3600) - (cambioMin*600) - (cambioSeg*10));
+            let cambioDc = Math.trunc(cambio - (cambioHr*36000) - (cambioMin*600) - (cambioSeg*10));
 
             let txtCambio = "+" + cambioHr + ":" + cambioMin + ":" + cambioSeg + "." +cambioDc;
 
@@ -185,8 +190,13 @@ function hacerIntervalo() {
 
             let fila = document.createElement("TR");
             fila.innerHTML = inter;
-            tabla.appendChild(fila);
 
+            if (numeroIntervalos == 1){
+                tabla.appendChild(fila);
+            } else {
+                tabla.insertBefore(fila, encabezados.nextSibling);
+            }
+            
             imgCronometro.src = "./img/intervalo creado.svg";
             txtEstado.innerHTML = "Intervalo creado.";
         }   
